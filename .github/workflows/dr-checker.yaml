@@ -41,6 +41,6 @@ jobs:
       - name: Run DR checker
         run: |
           dr-checker \
-            --config dr-config.yaml \
+            --config dr-checker-config.yaml \
             --primary-image-uri "$PRIMARY_ECR_IMAGE_URI" \
             --dr-image-uri "$DR_ECR_IMAGE_URI"
