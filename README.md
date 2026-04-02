@@ -16,6 +16,7 @@ All infrastructure is 100% managed using **Terraform**, following AWS **Well-Arc
 ---
 # 📘 Table of Contents
 
+- [What This Project Demonstrates](#what-this-project-demonstrates)
 - [Architecture Overview](#architecture-overview)
 - [Demo Videos](#demo-videos)
 - [Key Features](#key-features)
@@ -33,6 +34,18 @@ All infrastructure is 100% managed using **Terraform**, following AWS **Well-Arc
 - [Cost Optimization](#cost-optimization)
 - [Known Limitations and Trade-offs](#known-limitations-and-trade-offs)
 - [License](#license)
+
+---
+
+# **What This Project Demonstrates**
+
+This project demonstrates:
+
+  - Designing multi-region disaster recovery architectures
+  - Making trade-offs between cost, complexity, and reliability
+  - Implementing secure CI/CD with OIDC
+  - Building production-ready infrastructure using Terraform
+  - Understanding failure scenarios and controlled recovery strategies
 
 ---
 
