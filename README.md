@@ -25,7 +25,7 @@ All infrastructure is 100% managed using **Terraform**, following AWS **Well-Arc
 - [Failover Strategy](#failover-strategy)
 - [Failure Scenarios & Recovery](#failure-scenarios--recovery)
 - [Terraform Structure](#terraform-structure)
-- [CI/CD Strategy](#ci-cd-strategy)
+- [CI/CD Strategy](#cicd-strategy)
 - [Reviewer Setup (How to Deploy This Project in Your AWS Account)](#reviewer-setup-how-to-deploy-this-project-in-your-aws-account)
 - [CloudWatch Monitoring and Alarms](#cloudwatch-monitoring-and-alarms)
 - [Security Best Practices Used](#security-best-practices-used)
