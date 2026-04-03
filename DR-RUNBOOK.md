@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This runbook defines the operational procedures for handling failures in the multi-region WordPress disaster recovery architecture.
+This runbook defines the operational procedures for handling failures in the multi-region disaster recovery platform architecture.
 
 It provides step-by-step guidance for:
 
