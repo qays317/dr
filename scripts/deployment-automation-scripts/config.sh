@@ -31,7 +31,7 @@ MAX_REPLICA_LAG=30
 ############################################
 #  Domain and hosted zone
 ############################################
-HOSTED_ZONE_ID="Z046647128J97ELQJFGYW"
+HOSTED_ZONE_ID="Z0201471MCIEQVEUEMQF"
 PRIMARY_DOMAIN="rqays.com"   # Primary custom domain without www (e.g., yourdomain.com)
 CERTIFICATE_SANs='["*.rqays.com"]'
 
