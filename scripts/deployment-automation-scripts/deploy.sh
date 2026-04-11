@@ -90,6 +90,11 @@ deploy_stack "dr/s3"
 ECS_CLUSTER_NAME=$(terraform -chdir="environments/primary/ecs" output -raw ecs_cluster_name)
 #ECS_SERVICE_NAME=$(terraform -chdir="environments/primary/ecs" output -raw ecs_service_name)
 ECS_SERVICE_NAME="wordpress-service"
+STACK_VARS["operations/dr_orchestration"]+=" \
+  -var ecs_cluster_name=$ECS_CLUSTER_NAME \
+  -var ecs_service_name=$ECS_SERVICE_NAME
+
+
 deploy_stack "operations/dr_orchestration"
 
 echo "🎉 Deployment complete!"
