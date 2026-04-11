@@ -7,7 +7,7 @@ DR_REGION="ca-central-1"
 ############################################
 #  Terraform Backend Config
 ############################################
-TF_STATE_BUCKET_NAME="terraform-state-11042026"
+TF_STATE_BUCKET_NAME="terraform-state-110420261"
 TF_STATE_BUCKET_REGION="eu-central-1"
 
 ############################################
@@ -19,8 +19,8 @@ ECR_REPO_NAME="ecs-wordpress-app"
 ############################################
 #  Media S3 buckets
 ############################################
-PRIMARY_MEDIA_S3_BUCKET="wordpress-media-primary-2026"
-DR_MEDIA_S3_BUCKET="wordpress-media-dr-2026"
+PRIMARY_MEDIA_S3_BUCKET="wordpress-media-primary-20261"
+DR_MEDIA_S3_BUCKET="wordpress-media-dr-20261"
 
 ############################################
 #  Media S3 buckets
