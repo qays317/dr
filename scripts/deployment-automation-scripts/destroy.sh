@@ -59,7 +59,8 @@ destroy_stack() {
 echo "🧹 Removing DB bootstrap Lambda to shorten teardown time..."
 terraform -chdir="environments/primary/network_rds" init -reconfigure \
     -backend-config="bucket=$TF_STATE_BUCKET_NAME" \
-    -backend-config="region=$TF_STATE_BUCKET_REGION"
+    -backend-config="region=$TF_STATE_BUCKET_REGION" \
+    -backend-config="key=environments/primary/network_rds/terraform.tfstate" \
 
 terraform -chdir="environments/primary/network_rds" destroy \
   -target=aws_lambda_function.lambda \
