@@ -7,7 +7,7 @@ DR_REGION="ca-central-1"
 ############################################
 #  Terraform Backend Config
 ############################################
-TF_STATE_BUCKET_NAME="terraform-state-1011202555"
+TF_STATE_BUCKET_NAME="terraform-state-11042026"
 TF_STATE_BUCKET_REGION="eu-central-1"
 
 ############################################
@@ -19,8 +19,8 @@ ECR_REPO_NAME="ecs-wordpress-app"
 ############################################
 #  Media S3 buckets
 ############################################
-PRIMARY_MEDIA_S3_BUCKET="wordpress-media-primary-2004"
-DR_MEDIA_S3_BUCKET="wordpress-media-dr-2004"
+PRIMARY_MEDIA_S3_BUCKET="wordpress-media-primary-2026"
+DR_MEDIA_S3_BUCKET="wordpress-media-dr-2026"
 
 ############################################
 #  Media S3 buckets
@@ -31,13 +31,13 @@ MAX_REPLICA_LAG=30
 ############################################
 #  Domain and hosted zone
 ############################################
-HOSTED_ZONE_ID=""
-PRIMARY_DOMAIN="example.com"   # Primary custom domain without www (e.g., yourdomain.com)
-CERTIFICATE_SANs='["*.example.com"]'
+HOSTED_ZONE_ID="Z046647128J97ELQJFGYW"
+PRIMARY_DOMAIN="rqays.com"   # Primary custom domain without www (e.g., yourdomain.com)
+CERTIFICATE_SANs='["*.rqays.com"]'
 
 ############################################
 #  SSL certificates
 ############################################
-PRIMARY_ALB_SSL_CERTIFICATE_ARN=""
+PRIMARY_ALB_SSL_CERTIFICATE_ARN="arn:aws:acm:us-east-1:156166604445:certificate/e57118e4-0665-4aa7-8f85-5ba58214eb68"
 DR_ALB_SSL_CERTIFICATE_ARN=""
-CLOUDFRONT_SSL_CERTIFICATE_ARN=""
+CLOUDFRONT_SSL_CERTIFICATE_ARN="arn:aws:acm:us-east-1:156166604445:certificate/e57118e4-0665-4aa7-8f85-5ba58214eb68"
