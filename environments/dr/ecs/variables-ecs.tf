@@ -24,7 +24,7 @@ variable "ecr_image_uri" {
   type = string
 }
 
-variable "ecs_cluster_name_config" {
+variable "ecs_cluster_name" {
   type = string
 }
 
@@ -38,7 +38,7 @@ variable "ecs_task_definition_config" {
   })
 }
 
-variable "ecs_service_name_config" {
+variable "ecs_service_name" {
   type = string 
 }
 
