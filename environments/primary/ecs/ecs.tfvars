@@ -6,4 +6,4 @@ ecs_task_definition_config = {
 }
 
 
-ecs_task_desired_count = number
+ecs_task_desired_count = 2
