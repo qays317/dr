@@ -34,7 +34,7 @@ STACK_VARS["primary/s3"]="\
 
 # PRIMARY ALB
 STACK_VARS["primary/alb"]="\
-  -var-file=alb.tfvars \
+  -var-file=../shared/alb.tfvars \
   -var primary_region=$PRIMARY_REGION \
   -var state_bucket_name=$TF_STATE_BUCKET_NAME \
   -var state_bucket_region=$TF_STATE_BUCKET_REGION \
@@ -61,7 +61,7 @@ STACK_VARS["dr/s3"]="\
 
 # DR ALB
 STACK_VARS["dr/alb"]="\
-  -var-file=alb.tfvars \
+  -var-file=../shared/alb.tfvars \
   -var dr_region=$DR_REGION \
   -var state_bucket_name=$TF_STATE_BUCKET_NAME \
   -var state_bucket_region=$TF_STATE_BUCKET_REGION \
