@@ -30,6 +30,7 @@ ecs_security_group_config = {
 }
 
 ecs_task_definition_config = {
+    name = wordpress-task-definition
     family = "wordpress-task"
     cpu = "1024"
     memory = "2048"
