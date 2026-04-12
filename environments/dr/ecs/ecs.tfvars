@@ -8,4 +8,4 @@ ecs_task_definition_config = {
     memory = "2048"
 }
 
-ecs_task_desired_count = number
+ecs_task_desired_count = 0
