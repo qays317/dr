@@ -34,21 +34,15 @@ ecr_image_uri = ""
 ecs_cluster_name_config = "wordpress-cluster"
 
 ecs_task_definition_config = {
-    wordpress-task-definition = {
-        family = "wordpress-task"
-        cpu = "1024"
-        memory = "2048"
-    }
+    family = "wordpress-task"
+    cpu = "1024"
+    memory = "2048"
 }
 
 ecs_service_config = {
-    wordpress-service = {
-        cluster = "wordpress-cluster"
-        task_definition = "wordpress-task-definition"
-        desired_count = 0
-        network_configuration = {
-          security_group_name = "wordpress-service-SG"
-        }
+    desired_count = 0
+    network_configuration = {
+        security_group_name = "wordpress-service-SG"
     }
 }
 
