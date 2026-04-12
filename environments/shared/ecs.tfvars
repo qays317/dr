@@ -29,6 +29,12 @@ ecs_security_group_config = {
     }
 }
 
+ecs_task_definition_config = {
+    family = "wordpress-task"
+    cpu = "1024"
+    memory = "2048"
+}
+
 ecs_service_sg_name = "wordpress-service-SG"
 
 vpc_endpoints_config = {
