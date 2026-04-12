@@ -104,7 +104,7 @@ resource "aws_ecs_service" "wordpress" {
     name = var.ecs_service_name
     cluster = aws_ecs_cluster.wordpress.id
     task_definition = aws_ecs_task_definition.wordpress.arn
-    desired_count = var.ecs_service.desired_count
+    desired_count = var.ecs_task_desired_count
     launch_type = "FARGATE"
     enable_execute_command = true
     propagate_tags = "SERVICE"
