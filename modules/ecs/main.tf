@@ -26,7 +26,7 @@ resource "aws_ecs_cluster" "wordpress" {
 data "aws_region" "current" {}
 
 locals {
-  container_definitions = {
+  container_definition = {
       name = "wordpress-container"
       image = var.ecr_image_uri
       portMappings = [{ containerPort = 80, protocol = "tcp" }]
@@ -92,7 +92,7 @@ resource "aws_ecs_task_definition" "wordpress" {
     memory = var.ecs_task_definition.memory
     execution_role_arn = var.ecs_execution_role_arn
     task_role_arn = var.ecs_task_role_arn
-    container_definitions = local.container_definitions[each.key]
+    container_definitions = local.container_definition
     tags = { 
       Name = var.ecs_task_definition.name
       project = "wordpress"
