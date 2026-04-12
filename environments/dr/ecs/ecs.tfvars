@@ -15,18 +15,6 @@ ecs_service_config = {
     }
 }
 
-vpc_endpoints_config = {
-    "logs" = "Interface",
-    "s3" = "Gateway", 
-    "ecs" = "Interface",
-    "sts" = "Interface",
-    "monitoring" = "Interface",
-    "ecr.api" = "Interface",
-    "ecr.dkr" = "Interface",
-    "ssmmessages" = "Interface",
-    "ssm" = "Interface",
-    "ec2messages" = "Interface",
-    "secretsmanager" = "Interface"
-}
+
 
 
