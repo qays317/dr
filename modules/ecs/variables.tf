@@ -50,9 +50,12 @@ variable "ecs_task_role_arn" {
   type = string
 }
 
+variable "ecs_service_name" {
+  type = string
+}
+
 variable "ecs_service" {
   type = object({
-    name = string
     desired_count = number
     network_configuration = object({
       security_group_name = string
