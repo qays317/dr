@@ -11,10 +11,12 @@ TF_STATE_BUCKET_NAME="terraform-state-110420261"
 TF_STATE_BUCKET_REGION="eu-central-1"
 
 ############################################
-#  Docker / Container Config
+#  ECS / Container Config
 ############################################
 DOCKERHUB_IMAGE="qaysalnajjad/ecs-wordpress-app:v3.6"
 ECR_REPO_NAME="ecs-wordpress-app"
+ECS_CLUSTER_NAME="wordpress-cluster"
+ECS_SERVICE_NAME="wordpress-service"
 
 ############################################
 #  Media S3 buckets
