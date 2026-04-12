@@ -54,13 +54,12 @@ variable "ecs_service_name" {
   type = string
 }
 
-variable "ecs_service" {
-  type = object({
-    desired_count = number
-    network_configuration = object({
-      security_group_name = string
-    })
-  })
+variable "ecs_service_sg_name" {
+  type = string
+}
+
+variable "ecs_task_desired_count" {
+  type = number
 }
 
 variable "security_groups" {
