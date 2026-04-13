@@ -66,8 +66,8 @@ module "ecs" {
     wordpress_secret_arn = data.terraform_remote_state.rds.outputs.wordpress_secret_arn
     # ALB data
     target_group_arn = data.terraform_remote_state.alb.outputs.target_group_arn
-    target_group_arn_suffix = data.terraform_remote_state.alb.outputs.target_group_arn_suffix
-    load_balancer_arn_suffix = data.terraform_remote_state.alb.outputs.alb_arn_suffix
+    #target_group_arn_suffix = data.terraform_remote_state.alb.outputs.target_group_arn_suffix
+    #load_balancer_arn_suffix = data.terraform_remote_state.alb.outputs.alb_arn_suffix
     # Storage & CDN
     s3_bucket_name = var.dr_media_s3_bucket
     primary_domain = var.primary_domain
