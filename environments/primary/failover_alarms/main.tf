@@ -81,5 +81,30 @@ resource "aws_cloudwatch_composite_alarm" "failover_trigger_alarm" {
 
 
 
+/*
+===================================================================================================================================================================
+===================================================================================================================================================================
+                                                              EventBridge Rule
+===================================================================================================================================================================
+===================================================================================================================================================================
+*/
+
+resource "aws_cloudwatch_event_rule" "failover_alarm_rule" {
+  name        = "wordpress-failover-alarm-rule"
+  description = "Start DR Step Function when composite failover alarm enters ALARM state"
+
+  event_pattern = jsonencode({
+    source      = ["aws.cloudwatch"]
+    "detail-type" = ["CloudWatch Alarm State Change"]
+    resources   = [aws_cloudwatch_composite_alarm.failover_trigger_alarm.arn]
+    detail = {
+      state = {
+        value = ["ALARM"]
+      }
+    }
+  })
+}
+
+
 
 
