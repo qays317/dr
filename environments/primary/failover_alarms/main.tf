@@ -105,6 +105,44 @@ resource "aws_cloudwatch_event_rule" "failover_alarm_rule" {
   })
 }
 
+data "aws_iam_policy_document" "eventbridge_assume_role" {
+  statement {
+    effect = "Allow"
 
+    principals {
+      type        = "Service"
+      identifiers = ["events.amazonaws.com"]
+    }
+
+    actions = ["sts:AssumeRole"]
+  }
+}
+
+resource "aws_iam_role" "eventbridge_invoke_sfn_role" {
+  name               = "eventbridge-start-sfn-role"
+  assume_role_policy = data.aws_iam_policy_document.eventbridge_assume_role.json
+}
+
+data "aws_iam_policy_document" "eventbridge_start_sfn_policy" {
+  statement {
+    effect = "Allow"
+
+    actions = ["states:StartExecution"]
+
+    resources = [
+      aws_sfn_state_machine.dr_failover_orchestrator.arn
+    ]
+  }
+}
+
+resource "aws_iam_policy" "eventbridge_start_sfn_policy" {
+  name   = "eventbridge-start-sfn-policy"
+  policy = data.aws_iam_policy_document.eventbridge_start_sfn_policy.json
+}
+
+resource "aws_iam_role_policy_attachment" "eventbridge_start_sfn_attach" {
+  role       = aws_iam_role.eventbridge_invoke_sfn_role.name
+  policy_arn = aws_iam_policy.eventbridge_start_sfn_policy.arn
+}
 
 
