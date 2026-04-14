@@ -24,7 +24,7 @@ data "aws_db_instance" "primary" {
 }
 
 resource "aws_db_instance" "read_replica" {
-  identifier = "${var.rds_replica_identifier}"
+  identifier = var.rds_replica_identifier
   
   replicate_source_db = data.aws_db_instance.primary.db_instance_arn
   
