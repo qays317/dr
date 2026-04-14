@@ -28,6 +28,7 @@ DR_MEDIA_S3_BUCKET="wordpress-media-dr-20261"
 #  Media S3 buckets
 ############################################
 RDS_IDENTIFIER="wordpress-rds"
+RDS_REPLICA_IDENTIFIER="wordpress-rds-replica"
 MAX_REPLICA_LAG=30
 
 ############################################
