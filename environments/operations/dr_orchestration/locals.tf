@@ -13,7 +13,7 @@ locals {
         timeout = 60
         environment = {
           DR_REGION                   = var.dr_region
-          DR_REPLICA_IDENTIFIER       = var.dr_replica_identifier
+          DR_REPLICA_IDENTIFIER       = var.rds_replica_identifier
           MAX_REPLICATION_LAG_SECONDS = tostring(var.max_replication_lag_seconds)
         }
       }
@@ -22,7 +22,7 @@ locals {
         timeout = 60
         environment = {
           DR_REGION             = var.dr_region
-          DR_REPLICA_IDENTIFIER = var.dr_replica_identifier
+          DR_REPLICA_IDENTIFIER = var.rds_replica_identifier
         }
       }
       
@@ -30,7 +30,7 @@ locals {
         timeout = 60
         environment = {
           DR_REGION             = var.dr_region
-          DR_REPLICA_IDENTIFIER = var.dr_replica_identifier
+          DR_REPLICA_IDENTIFIER = var.rds_replica_identifier
         }
       }
 
