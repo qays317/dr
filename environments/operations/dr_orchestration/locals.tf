@@ -39,6 +39,7 @@ locals {
         environment = {
           DB_SECRET_ARN = data.terraform_remote_state.dr_rds.outputs.wordpress_secret_arn
           DB_CONNECT_TIMEOUT = tostring(var.db_connect_timeout)
+          DR_REGION = var.dr_region
         }
       }
 
