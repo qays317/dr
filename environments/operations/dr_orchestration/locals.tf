@@ -1,13 +1,6 @@
 
 locals {
   checks = {
-
-      "recheck-incident" = {
-        timeout = 30
-        environment = {
-          PRIMARY_ALARM_NAME = var.primary_alarm_name
-        }
-      }
       
       "check-replica-readiness" ={ 
         timeout = 60
